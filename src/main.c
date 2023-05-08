@@ -30,7 +30,7 @@ int main( int argc, char *argv[])   // define the main function
     setDefults();
     for(int i = 1; i < argc; i++)
     {
-        if(strcmp(argv[i], "DEBUG") == 0)
+        if(strcmp(argv[i], "-D") == 0)
         {
             setLoggingLevel(atoi(argv[i+1]));
             i++; // Takes the number after the debug and moves to next value afterwards 
