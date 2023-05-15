@@ -3,7 +3,6 @@
 #include <string.h> 
 
 #include "utils/logger.h"
-#include "modules/folderTest/folderTest.h"
 
 
 /********************************************************************************
@@ -32,8 +31,15 @@ int main( int argc, char *argv[])   // define the main function
     {
         if(strcmp(argv[i], "-D") == 0)
         {
-            setLoggingLevel(atoi(argv[i+1]));
-            i++; // Takes the number after the debug and moves to next value afterwards 
+            if(i + 1 < argc)
+            {
+                setLoggingLevel(atoi(argv[i+1]));
+                i++; // Takes the number after the debug and moves to next value afterwards 
+            } else {
+                // setLoggingLevel(1);
+                break;
+            }
+            
         } else if(strcmp(argv[i], "DEBUG_TO_F")){
             //Set debugging to a file
             
