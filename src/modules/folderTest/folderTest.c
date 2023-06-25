@@ -2,5 +2,5 @@
 
 int folderTest()
 {
-    // printf("From a folder?!");
+    printf("From a folder?!");
 }

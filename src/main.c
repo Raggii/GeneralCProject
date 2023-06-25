@@ -3,6 +3,7 @@
 #include <string.h> 
 
 #include "utils/logger.h"
+#include "modules/folderTest/folderTest.h"
 
 
 /********************************************************************************
@@ -59,5 +60,6 @@ int main( int argc, char *argv[])   // define the main function
 
     printf("Welcome to C Convenience \n");  // print the statement.  
     testFuntion();
+    folderTest();
     printf("\n\n");
 }  
